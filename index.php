@@ -62,6 +62,7 @@ $film1 = new Movies("Avengers",
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <title>OOP</title>
 </head>
 <body>
@@ -69,15 +70,72 @@ $film1 = new Movies("Avengers",
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h2><?php echo $film3->title ?></h2>
+                    <h2><?php echo $film1->title; ?></h2>
+                    <p><?php echo $film1->regista; ?></p>
+                    <ul>
+                        <li>
+                            <?php
+                                echo $film1->attori;
+                            ?>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <?php
+                                echo $film1->valutazione->premio_oscar;
+                            ?>
+                        </li>
+                        <li>
+                            <?php
+                                echo $film1->valutazione->golden_globes;
+                            ?>
+                        </li>
+                        <li>
+                            <?php
+                                echo $film1->valutazione->bafta;
+                            ?>
+                        </li>
+                        <li>
+                            <?php
+                                echo $film1->valutazione->box_office;
+                            ?>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col"></div>
+                
                 <div class="col"></div>
                 <div class="col"></div>
                 <div class="col"></div>
                 <div class="col"></div>
             </div>
+            <div class="row">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://lumiere-a.akamaihd.net/v1/images/p_avengersendgame_19751_e14a0104.jpeg?region=0%2C0%2C540%2C810" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h2><?php echo $film1->title; ?></h2>
+                        <p> <h5>Regista</h5><?php echo $film1->regista; ?></p>
+                        <div>
+                            <h5>Attori</h5>
+                                <?php
+                                    echo $film1->attori;
+                                ?>
+                        </div>
+                        <div>
+                            <h5>Premi e Valutazioni</h5>
+                            <?php
+                                echo $film1->valutazione->premio_oscar;?>, <?php
+                                echo $film1->valutazione->golden_globes;?>, <?php
+                                echo $film1->valutazione->bafta;?>, <?php
+                                echo $film1->valutazione->box_office;?>, <?php
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
 </body>
 </html>
