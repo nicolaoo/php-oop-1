@@ -1,5 +1,6 @@
 <?php
 
+include_once __DIR__. './valutazione';
 
 class Movies {
 
@@ -8,7 +9,7 @@ class Movies {
     public $attori;
     public $valutazione;
 
-    function __construct($_title, $_regista, $_attori, $_valutazione) {
+    function __construct($_title, $_regista, $_attori, Valutazione $_valutazione) {
         $this->title = $_title;
         $this->regista = $_regista;
         $this->attori= $_attori;

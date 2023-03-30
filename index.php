@@ -1,6 +1,8 @@
 <?php
 
 include_once __DIR__. './models/movies.php';
+include_once __DIR__. './models/valutazione';
+
 
 // $film1 = new Movies ();
 // $film2 = new Movies ();
