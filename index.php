@@ -94,6 +94,56 @@ $film1 = new Movies("Avengers",
                         </div>
                     </div>
                 </div>
+
+                <div class="card">
+                    <img src="https://www.liberta.it/wp-content/uploads/2022/03/The-Batman-poster_258-1232.jpg" 
+                    class="card-img-top avengers" alt="...">
+                    <div class="card-body">
+                        <h2 class="m-0"><?php echo $film2->title; ?></h2>
+                        <h5 class="my-1">Regista</h5>
+                        <p class="m-0"><?php echo $film2->regista; ?></p>
+                        <div>
+                            <h5 class="my-1">Attori</h5>
+                                <?php
+                                    echo $film1->attori;
+                                ?>
+                        </div>
+                        <div>
+                            <h5 class="my-1">Premi e Valutazioni</h5>
+                            <?php
+                                echo $film2->valutazione->premio_oscar;?>, <?php
+                                echo $film2->valutazione->golden_globes;?>, <?php
+                                echo $film2->valutazione->bafta;?>, <?php
+                                echo $film2->valutazione->box_office;?>, <?php
+                            ?>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://pad.mymovies.it/filmclub/2022/03/243/locandinapg1.jpg" 
+                    class="card-img-top avengers" alt="...">
+                    <div class="card-body">
+                        <h2 class="m-0"><?php echo $film3->title; ?></h2>
+                        <h5 class="my-1">Regista</h5>
+                        <p class="m-0"><?php echo $film3->regista; ?></p>
+                        <div>
+                            <h5 class="my-1">Attori</h5>
+                                <?php
+                                    echo $film3->attori;
+                                ?>
+                        </div>
+                        <div>
+                            <h5 class="my-1">Premi e Valutazioni</h5>
+                            <?php
+                                echo $film3->valutazione->premio_oscar;?>, <?php
+                                echo $film3->valutazione->golden_globes;?>, <?php
+                                echo $film3->valutazione->bafta;?>, <?php
+                                echo $film3->valutazione->box_office;?>, <?php
+                            ?>
+                        </div>
+                    </div>
+                </div2
             </div>
         </div>
     </section>
