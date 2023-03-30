@@ -1,0 +1,10 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.avengers {
+    aspect-ratio: 13/12;
+    object-fit: cover;
+    object-position: top;
+}
