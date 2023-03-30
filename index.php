@@ -1,6 +1,29 @@
 <?php
 
+include_once __DIR__. './models/movies.php';
 
+$film1 = new Movies ();
+$film2 = new Movies ();
+
+//titolo film
+$film1->title = "Avengers"; 
+$film2->title = "Batman Begins";
+
+//regista dei film
+$film1->regista = "Anthony Russo";
+$film2->regista = "Christopher Nolan";
+
+//attori del film
+$film1->attori = "Robert Downey Jr., Scarlett Johansson, Chris Evans, Mark Ruffalo, Chris Hemsworth, Jeremy Renner ";
+$film2->attori = "Christian Bale, Cillian Murphy, Katie Holmes, Michael Caine";
+
+//attori del film
+$film1->valutazione = 4.5;
+$film2->valutazione = 4.8;
+
+
+var_dump($film1);
+var_dump($film2);
 
 ?>
 <!DOCTYPE html>
