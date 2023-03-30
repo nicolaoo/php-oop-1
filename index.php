@@ -23,7 +23,7 @@ include_once __DIR__. '.\models\valutazione.php';
 // $film1->valutazione = 4.5;
 // $film2->valutazione = 4.8;
 
-//nuvo fil con il costruttore
+//nuvo film con il costruttore
 $film3 = new Movies("Everything Everywhere All at Once",
  " Daniel Kwan, Daniel Scheinert", 
  "Michelle Yeoh, Ke Huy Quan, Stephanie Hsu, James Hong", 
@@ -33,8 +33,27 @@ $film3 = new Movies("Everything Everywhere All at Once",
  "4° in classifica"));
 // var_dump($film1);
 // var_dump($film2);
-var_dump($film3);
 
+
+$film2 = new Movies("Batman Begins",
+ "Christopher Nolan", 
+ "Christian Bale, Cillian Murphy, Katie Holmes, Michael Caine", 
+ new Valutazione("vinto 7 premi oscar", 
+ "6 candidature e vinto 2 Golden Globes", 
+ "10 candidature e vinto un premio ai BAFTA", 
+ "4° in classifica"));
+
+$film1 = new Movies("Avengers",
+ "  Joe Russo, Joss Whedon, Anthony Russo", 
+ "Robert Downey Jr., Scarlett Johansson, Chris Evans, Mark Ruffalo, Chris Hemsworth, Jeremy Renner ", 
+ new Valutazione("vinto 7 premi oscar", 
+ "6 candidature e vinto 2 Golden Globes", 
+ "10 candidature e vinto un premio ai BAFTA", 
+ "4° in classifica"));
+
+ var_dump($film1);
+ var_dump($film2);
+ var_dump($film3);
 
 ?>
 <!DOCTYPE html>
@@ -46,6 +65,19 @@ var_dump($film3);
     <title>OOP</title>
 </head>
 <body>
-    
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2><?php echo $film3->title ?></h2>
+                </div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
