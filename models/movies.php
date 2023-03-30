@@ -8,12 +8,14 @@ class Movies {
     public $regista;
     public $attori;
     public $valutazione;
+    public $genere;
 
-    function __construct($_title, $_regista, $_attori, Valutazione $_valutazione) {
+    function __construct($_title, $_regista, $_attori, Valutazione $_valutazione, $_genere) {
         $this->title = $_title;
         $this->regista = $_regista;
         $this->attori= $_attori;
         $this->valutazione = $_valutazione;
+        $this->genere = $_genere;
     }
     
 }

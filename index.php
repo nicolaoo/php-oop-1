@@ -30,7 +30,7 @@ $film3 = new Movies("Everything Everywhere All at Once",
  new Valutazione("vinto 7 premi oscar", 
  "6 candidature e vinto 2 Golden Globes", 
  "10 candidature e vinto un premio ai BAFTA", 
- "4° in classifica"));
+ "4° in classifica"), "eroi, avventora, azione");
 // var_dump($film1);
 // var_dump($film2);
 
@@ -41,7 +41,7 @@ $film2 = new Movies("Batman Begins",
  new Valutazione("vinto 7 premi oscar", 
  "6 candidature e vinto 2 Golden Globes", 
  "10 candidature e vinto un premio ai BAFTA", 
- "4° in classifica"));
+ "4° in classifica"), "eroi, avventora, azione");
 
 $film1 = new Movies("Avengers",
  "  Joe Russo, Joss Whedon, Anthony Russo", 
@@ -49,7 +49,7 @@ $film1 = new Movies("Avengers",
  new Valutazione("vinto 7 premi oscar", 
  "6 candidature e vinto 2 Golden Globes", 
  "10 candidature e vinto un premio ai BAFTA", 
- "4° in classifica"));
+ "4° in classifica"), "Fantastico, commedia, avventura");
 
  var_dump($film1);
  var_dump($film2);
@@ -68,12 +68,12 @@ $film1 = new Movies("Avengers",
 </head>
 <body>
     <section>
-        <div class="container">
+        <div class="container my-5">
             <div class="grid">
-                <div class="card">
+                <div class="card text-white">
                     <img src="https://lumiere-a.akamaihd.net/v1/images/p_avengersendgame_19751_e14a0104.jpeg?region=0%2C0%2C540%2C810" 
                     class="card-img-top avengers" alt="...">
-                    <div class="card-body">
+                    <div class="card-body avengers-body">
                         <h2 class="m-0"><?php echo $film1->title; ?></h2>
                         <h5 class="my-1">Regista</h5>
                         <p class="m-0"><?php echo $film1->regista; ?></p>
@@ -92,23 +92,29 @@ $film1 = new Movies("Avengers",
                                 echo $film1->valutazione->box_office;?>, <?php
                             ?>
                         </div>
+                        <div>
+                            <h5 class="my-1">Genere</h5>
+                            <?php
+                                echo $film1->genere
+                            ?>
+                        </div>
                     </div>
                 </div>
 
                 <div class="card">
                     <img src="https://www.liberta.it/wp-content/uploads/2022/03/The-Batman-poster_258-1232.jpg" 
                     class="card-img-top avengers" alt="...">
-                    <div class="card-body">
+                    <div class="card-body batman-body text-white">
                         <h2 class="m-0"><?php echo $film2->title; ?></h2>
                         <h5 class="my-1">Regista</h5>
                         <p class="m-0"><?php echo $film2->regista; ?></p>
-                        <div>
+                        <div class="text-white">
                             <h5 class="my-1">Attori</h5>
                                 <?php
                                     echo $film1->attori;
                                 ?>
                         </div>
-                        <div>
+                        <div class="text-white">
                             <h5 class="my-1">Premi e Valutazioni</h5>
                             <?php
                                 echo $film2->valutazione->premio_oscar;?>, <?php
@@ -117,13 +123,19 @@ $film1 = new Movies("Avengers",
                                 echo $film2->valutazione->box_office;?>, <?php
                             ?>
                         </div>
+                        <div class="text-white">
+                        <h5 class="my-1">Genere</h5>
+                            <?php
+                                echo $film1->genere
+                            ?>
+                        </div>
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card text-white">
                     <img src="https://pad.mymovies.it/filmclub/2022/03/243/locandinapg1.jpg" 
                     class="card-img-top avengers" alt="...">
-                    <div class="card-body">
+                    <div class="card-body allonce-body">
                         <h2 class="m-0"><?php echo $film3->title; ?></h2>
                         <h5 class="my-1">Regista</h5>
                         <p class="m-0"><?php echo $film3->regista; ?></p>
@@ -142,8 +154,14 @@ $film1 = new Movies("Avengers",
                                 echo $film3->valutazione->box_office;?>, <?php
                             ?>
                         </div>
+                        <div>
+                            <h5 class="my-1">Genere</h5>
+                            <?php
+                                echo $film1->genere
+                            ?>
+                        </div>
                     </div>
-                </div2
+                </div>
             </div>
         </div>
     </section>
