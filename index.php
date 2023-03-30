@@ -1,7 +1,7 @@
 <?php
 
-include_once __DIR__. './models/movies.php';
-include_once __DIR__. './models/valutazione';
+include_once __DIR__. '.\models\movies.php';
+include_once __DIR__. '.\models\valutazione.php';
 
 
 // $film1 = new Movies ();
@@ -26,10 +26,11 @@ include_once __DIR__. './models/valutazione';
 //nuvo fil con il costruttore
 $film3 = new Movies("Everything Everywhere All at Once",
  " Daniel Kwan, Daniel Scheinert", 
- "Michelle Yeoh, Ke Huy Quan, Stephanie Hsu, James Hong",
- 4.7);
-
-
+ "Michelle Yeoh, Ke Huy Quan, Stephanie Hsu, James Hong", 
+ new Valutazione("vinto 7 premi oscar", 
+ "6 candidature e vinto 2 Golden Globes", 
+ "10 candidature e vinto un premio ai BAFTA", 
+ "4° in classifica"));
 // var_dump($film1);
 // var_dump($film2);
 var_dump($film3);
